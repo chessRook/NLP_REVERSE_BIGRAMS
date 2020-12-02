@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 def main():
     # r'C:\numerical_checks\texts\debug.txt'
-    file_path = r'C:\NLP_TRIALS\texts\check_that_runs.txt'
+    file_path = r'.\texts\check_that_runs.txt'
     with open(file_path, encoding='utf8') as text_file:
         text: str = text_file.read()
     # text = text.replace('\n', ' ').replace('\r', '').replace(',', '').replace('.', '').lower()
@@ -41,12 +41,15 @@ def make_distributions(forward_dict, backward_dict):
 
 
 def display_masses(forward_masses, backward_masses):
-    """plt.hist(forward_masses, bins=graph_resolution, color='y')
+    plt.hist(forward_masses, bins=graph_resolution, color='y')
+    plt.title('Forward Mass Distribution')
     plt.show()
     plt.hist(backward_masses, bins=graph_resolution, color='r')
-    plt.show()"""
+    plt.title('Backward Mass Distribution difference')
+    plt.show()
     difference = [backward - forward for forward, backward in zip(forward_masses, backward_masses)]
     plt.hist(difference, bins=graph_resolution, color='m')
+    plt.title('Mass Distribution difference')
     plt.show()
     print(len(forward_masses))
     print(len(backward_masses))
