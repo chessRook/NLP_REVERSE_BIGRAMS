@@ -41,7 +41,7 @@ def make_distributions(forward_dict, backward_dict):
 
 
 def display_masses(forward_masses, backward_masses):
-    plt.hist(forward_masses, bins=graph_resolution, color='y')
+    """plt.hist(forward_masses, bins=graph_resolution, color='y')
     plt.title('Forward Mass Distribution')
     plt.show()
     plt.hist(backward_masses, bins=graph_resolution, color='r')
@@ -50,18 +50,22 @@ def display_masses(forward_masses, backward_masses):
     difference = [backward - forward for forward, backward in zip(forward_masses, backward_masses)]
     plt.hist(difference, bins=graph_resolution, color='m')
     plt.title('Mass Distribution difference')
+    plt.show()"""
+    difference = [backward/forward for forward, backward in zip(forward_masses, backward_masses)]
+    plt.hist(difference, bins=graph_resolution, color='b')
+    plt.title('Mass Distribution Ratio')
     plt.show()
     print(len(forward_masses))
     print(len(backward_masses))
 
 
-number_of_words = 1
+number_of_words = 4
 no_mass = -9999
 
 
 def word_mass(word_dict: dict):
     total = word_dict[counter_key]
-    if total < 5:
+    if total < 30:
         return no_mass
     word_dict.pop(counter_key)
     total_keys = len(word_dict.keys())
