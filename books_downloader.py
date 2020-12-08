@@ -1,19 +1,51 @@
 import urllib.request
+import numpy as np
+from pathlib import Path
+from random import randrange as rg
+from itertools import count
 
+counter = lambda c=count(): next(c)
 web_url = r'http://www.gutenberg.org/files/'
-books_amount = 10
-start_from = 567
-skip = 3
-file_path = r'.\texts\check_that_runs.txt'
+books_amount = 20
+start_from = rg(1, 3000)
+skip = rg(4, 12)
+files_dir_path = Path(r'.\texts\many_text_files')
 
 
-def main_downloader():
+def directory_creator(files_amount):
+    global start_from
+    global skip
+    start_from = rg(1000, 9000)
+    skip = rg(4, 12)
+    for idx in range(files_amount):
+        start_from += (books_amount+9)*skip
+        file_path = get_current_file_path(files_dir_path)
+        main_downloader(file_path)
+
+
+def get_current_file_path(files_dir_path):
+    return files_dir_path / f'{counter()}.txt'
+
+
+def main_downloader(file_path):
+    file = open(file_path, 'a')
     for idx in range(1, skip * books_amount, skip):
         book_url = get_book_url(start_from, idx)
         book_text = books_downloader(book_url)
         pure_text = remove_non_book_parts(book_text)
-        with open(file_path, 'a') as file:
+        try:
             file.write(pure_text)
+        except:
+            print('Not writen')
+    file.close()
+
+
+def remove_start(book_text):
+    if len(book_text) < 550:
+        return ''
+    book_text = book_text[500:]
+    first_space_idx = book_text.index(' ')
+    return book_text[first_space_idx + 1:]
 
 
 def remove_non_book_parts(book_text):
@@ -23,6 +55,7 @@ def remove_non_book_parts(book_text):
     for splitter_2 in start_two_times_splitters:
         book_text = start_two_times_splitter(book_text, splitter_2)
     book_text = book_text.strip()
+    book_text = remove_start(book_text)
     try:
         index = book_text.rindex('end of')
         if index > len(book_text) * 0.95:
@@ -32,7 +65,8 @@ def remove_non_book_parts(book_text):
     book_text = ''.join([single_char if single_char.isalpha() else ' '
                          for single_char in book_text])
     print('*' * 30)
-    print(book_text)
+    print(book_text[0:min(len(book_text), 500)])
+    print(book_text[-min(len(book_text), 500):])
     return book_text
 
 
@@ -78,4 +112,4 @@ def get_book_url(start_from, idx):
 
 
 if __name__ == '__main__':
-    main_downloader()
+    directory_creator(40)
