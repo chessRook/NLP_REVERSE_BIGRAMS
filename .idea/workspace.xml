@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7806666-2687-4327-b39d-965efacfbd54" name="Default Changelist" comment="220MB results" />
+    <list default="true" id="e7806666-2687-4327-b39d-965efacfbd54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/debug_scripts/debug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reverse_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/reverse_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texts/debug/1.txt" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,14 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reverse_order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2625">
-              <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+            <state relative-caret-position="300">
+              <caret line="45" column="79" lean-forward="true" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
               <folding>
                 <element signature="e#16#52#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/debug_scripts/debug.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -36,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/books_downloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state relative-caret-position="1000">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -59,10 +73,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
       <find>so desperate as mine, finds a judge so merciful</find>
       <find>prin</find>
       <find>now</find>
+      <find>now_results_dir</find>
+      <find>31</find>
+      <find>pri</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,8 +88,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reverse_order.py" />
         <option value="$PROJECT_DIR$/books_downloader.py" />
+        <option value="$PROJECT_DIR$/debug_scripts/debug.py" />
+        <option value="$PROJECT_DIR$/reverse_order.py" />
       </list>
     </option>
   </component>
@@ -98,18 +116,23 @@
             <path>
               <item name="NLP_EXPERIMENTS" type="b2602c69:ProjectViewProjectNode" />
               <item name="NLP_EXPERIMENTS" type="462c0819:PsiDirectoryNode" />
-              <item name="NLP_backward_bigrams_Results" type="462c0819:PsiDirectoryNode" />
+              <item name="debug_scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NLP_EXPERIMENTS" type="b2602c69:ProjectViewProjectNode" />
               <item name="NLP_EXPERIMENTS" type="462c0819:PsiDirectoryNode" />
               <item name="NLP_backward_bigrams_Results" type="462c0819:PsiDirectoryNode" />
-              <item name="2020-12-08_21-41-44" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NLP_EXPERIMENTS" type="b2602c69:ProjectViewProjectNode" />
               <item name="NLP_EXPERIMENTS" type="462c0819:PsiDirectoryNode" />
               <item name="texts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NLP_EXPERIMENTS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NLP_EXPERIMENTS" type="462c0819:PsiDirectoryNode" />
+              <item name="texts" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,6 +188,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="debug" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="NLP_EXPERIMENTS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debug_scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debug_scripts/debug.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="reverse_order" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NLP_EXPERIMENTS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,6 +233,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.reverse_order" />
+        <item itemvalue="Python.debug" />
         <item itemvalue="Python.books_downloader" />
       </list>
     </recent_temporary>
@@ -210,23 +255,51 @@
       <option name="presentableId" value="LOCAL‎00001" />
       <updated>1607457033316</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎00002" summary="220MB results, on different 35,262&#10;Non rare words.">
+      <created>1607457173970</created>
+      <option name="number" value="LOCAL‎00002" />
+      <option name="presentableId" value="LOCAL‎00002" />
+      <updated>1607457173970</updated>
+    </task>
+    <task id="LOCAL‎00003" summary="Debug text directory with 2 files">
+      <created>1607457222402</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1607457222402</updated>
+    </task>
+    <task id="LOCAL‎00004" summary="New text directory with 40 files,&#10;6MB each.">
+      <created>1607457315492</created>
+      <option name="number" value="LOCAL‎00004" />
+      <option name="presentableId" value="LOCAL‎00004" />
+      <updated>1607457315492</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="1" width="1488" height="803" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.2544643" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.26041666" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.58928573" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.26934522" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32886904" />
@@ -256,7 +329,77 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update to run on directory with many files as data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to run on directory with many files as data" />
+    <MESSAGE value="220MB results, on different 35,262&#10;Non rare words." />
+    <MESSAGE value="Debug text directory with 2 files" />
+    <MESSAGE value="New text directory with 40 files,&#10;6MB each." />
+    <option name="LAST_COMMIT_MESSAGE" value="New text directory with 40 files,&#10;6MB each." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/reverse_order.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="counter_key not in word_dict" language="Python" />
+          <url>file://$PROJECT_DIR$/reverse_order.py</url>
+          <line>119</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="bigrams_dict['the']" language="Python" />
+        <watch expression="counter_key in bigrams_dict['the']" language="Python" />
+        <watch expression="counter_key in bigrams_dict['veil']" language="Python" />
+        <watch expression="counter_key in backward_dict['at']" language="Python" />
+        <watch expression="counter_key in backward_dict['the']" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>counter_key not in word_dict</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="watch">
+      <expression>
+        <expression-string>counter_key in backward_dict['the']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>counter_key in backward_dict['at']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>counter_key in bigrams_dict['veil']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>counter_key in bigrams_dict['the']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>a = bigrams_dict['the']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>bigrams_dict['the']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/NLP_backward_bigrams_Results/diff_back_minus_for_small_file.png">
@@ -311,22 +454,32 @@
     <entry file="file://$PROJECT_DIR$/NLP_backward_bigrams_Results/2020-12-08_21-41-44/difference.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/reverse_order.py">
+    <entry file="file://$PROJECT_DIR$/books_downloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2625">
-          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
+        <state relative-caret-position="1000">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
-            <element signature="e#16#52#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/books_downloader.py">
+    <entry file="file://$PROJECT_DIR$/debug_scripts.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debug_scripts/debug.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state relative-caret-position="225">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reverse_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="45" column="79" lean-forward="true" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#16#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
