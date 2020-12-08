@@ -8,3 +8,12 @@ I have problem in using BOOK CORPUS Due to its large size that can't fit into my
 
 I choose books because its THE most severe test to my hypothesis, since they are edited multiple times,
 And in regular text like emails, the results will be much stronger.
+
+
+################
+Problem how to wheight more frequent words,
+from one side if it more frequent it more important to us its distribution because it gonna to appear a lot,
+But from the other side, if its very frequent,
+its bigram will probably say nothing, so it
+doesn't matter her distribution.
+For now its un weighted.
