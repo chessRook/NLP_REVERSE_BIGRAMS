@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7806666-2687-4327-b39d-965efacfbd54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/debug_scripts/debug.py" afterDir="false" />
+    <list default="true" id="e7806666-2687-4327-b39d-965efacfbd54" name="Default Changelist" comment="Lot of improvements, and new statistics on accumulative distributions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reverse_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/reverse_order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/texts/debug/1.txt" beforeDir="false" />
@@ -18,20 +17,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reverse_order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="45" column="79" lean-forward="true" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
+            <state relative-caret-position="107">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding>
                 <element signature="e#16#52#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debug_scripts/debug.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -112,11 +102,6 @@
             <path>
               <item name="NLP_EXPERIMENTS" type="b2602c69:ProjectViewProjectNode" />
               <item name="NLP_EXPERIMENTS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NLP_EXPERIMENTS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NLP_EXPERIMENTS" type="462c0819:PsiDirectoryNode" />
-              <item name="debug_scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NLP_EXPERIMENTS" type="b2602c69:ProjectViewProjectNode" />
@@ -273,7 +258,13 @@
       <option name="presentableId" value="LOCAL‎00004" />
       <updated>1607457315492</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎00005" summary="Lot of improvements, and new statistics on accumulative distributions.">
+      <created>1607463455274</created>
+      <option name="number" value="LOCAL‎00005" />
+      <option name="presentableId" value="LOCAL‎00005" />
+      <updated>1607463455274</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -287,7 +278,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="1" width="1488" height="803" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
@@ -296,9 +286,9 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.26041666" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32886904" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.55505955" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.26934522" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -332,21 +322,27 @@
     <MESSAGE value="220MB results, on different 35,262&#10;Non rare words." />
     <MESSAGE value="Debug text directory with 2 files" />
     <MESSAGE value="New text directory with 40 files,&#10;6MB each." />
-    <option name="LAST_COMMIT_MESSAGE" value="New text directory with 40 files,&#10;6MB each." />
+    <MESSAGE value="Lot of improvements, and new statistics on accumulative distributions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lot of improvements, and new statistics on accumulative distributions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reverse_order.py</url>
-          <line>31</line>
+          <line>33</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="counter_key not in word_dict" language="Python" />
           <url>file://$PROJECT_DIR$/reverse_order.py</url>
-          <line>119</line>
+          <line>121</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/reverse_order.py</url>
+          <line>147</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -467,6 +463,15 @@
     <entry file="file://$PROJECT_DIR$/debug_scripts.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/NLP_backward_bigrams_Results/2020-12-08_23-31-08/difference.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP_backward_bigrams_Results/2020-12-08_23-36-01/accumulative_distributions_ratio.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLP_backward_bigrams_Results/2020-12-08_23-36-01/difference.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/debug_scripts/debug.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -476,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reverse_order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="45" column="79" lean-forward="true" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
+        <state relative-caret-position="107">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
             <element signature="e#16#52#0" expanded="true" />
           </folding>

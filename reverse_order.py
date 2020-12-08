@@ -9,11 +9,13 @@ results_path = Path(r'.\NLP_backward_bigrams_Results')
 counter_key = 'All_appearances_ooooooo'
 
 graph_resolution = 60
-rare_word_threshold = 31
+rare_word_threshold = 61
 number_of_words_global = 4
 no_mass = -9999
-now_results_dir = results_path / f'{datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}'
+additional_info = 'BETTER_FORMULA_MORE_ACCURATE'
+now_results_dir = results_path / f'{additional_info}_{datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}'
 Path.mkdir(now_results_dir)
+global_words_counter = 0
 
 
 def runner():
@@ -43,7 +45,7 @@ def make_avg_accumulative_distribution_plot(forward_dict, backward_dict):
     plt.plot(indices, forward, label='forward')
     plt.plot(indices, backward, label='backward')
     plt.plot(indices, ratio, label='ratio')
-    plt.title('Average accumulative distribution of first K most frequent words')
+    plt.title(f'Average accumulative distribution of first K most frequent words rare_threshold={rare_word_threshold}')
     plt.legend()
     plt.savefig(now_results_dir / 'accumulative_distributions_ratio.png')
     plt.show()
@@ -52,20 +54,20 @@ def make_avg_accumulative_distribution_plot(forward_dict, backward_dict):
 def accumul(forward_dict, backward_dict, i):
     mass_vector_forward = calculate_mass_distribution(forward_dict, i)
     mass_vector_backward = calculate_mass_distribution(backward_dict, i)
-    forward_avg, backward_avg = make_avg_mass(mass_vector_forward, mass_vector_backward)
+    forward_avg, backward_avg = make_sum_mass(mass_vector_forward, mass_vector_backward)
     return forward_avg, backward_avg
 
 
 def make_distributions(forward_dict, backward_dict):
     forward_masses = calculate_mass_distribution(forward_dict)
     backward_masses = calculate_mass_distribution(backward_dict)
-    make_avg_mass(forward_masses, backward_masses)
+    make_sum_mass(forward_masses, backward_masses)
     display_masses(forward_masses, backward_masses, now_results_dir)
 
 
-def make_avg_mass(forward_masses, backward_masses):
-    forward_avg = np.average(forward_masses)
-    backward_avg = np.average(backward_masses)
+def make_sum_mass(forward_masses, backward_masses):
+    forward_avg = np.sum(forward_masses)
+    backward_avg = np.sum(backward_masses)
     return forward_avg, backward_avg
 
 
@@ -132,10 +134,15 @@ def word_mass(word_dict: dict, number_of_words=number_of_words_global):
 
 
 def calculate_mass_distribution(bigrams_dict, number_of_words=number_of_words_global):
-    mass_vector = [word_mass(bigrams_dict[word], number_of_words) for word in bigrams_dict]
+    mass_vector = [word_weight(bigrams_dict[word]) * word_mass(bigrams_dict[word], number_of_words) for word in
+                   bigrams_dict]
     mass_vector = [el for el in mass_vector if el != no_mass]
     sorted_masses = sorted(mass_vector, reverse=True)
     return sorted_masses
+
+
+def word_weight(word_dict):
+    return word_dict[counter_key] / global_words_counter
 
 
 def add_to_dict(dict_of_bigs, word_1, word_2):
@@ -146,6 +153,8 @@ def add_to_dict(dict_of_bigs, word_1, word_2):
         dict_of_bigs[word_1][word_2] = 0
     dict_of_bigs[word_1][word_2] += 1
     dict_of_bigs[word_1][counter_key] += 1
+    global global_words_counter
+    global_words_counter += 1
 
 
 if __name__ == '__main__':
